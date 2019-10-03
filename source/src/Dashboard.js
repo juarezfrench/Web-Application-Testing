@@ -1,14 +1,11 @@
-import React, {useState, setState} from 'react';
-
-
-
+import React, {useState} from 'react';
 
    function Dashboard() {
     let [balls, setBalls] = useState(0);
     let [strikes, setStrikes] = useState(0);
     let [fouls, setFouls] = useState(0);
        let [hits, setHits] = useState(0);
-   let [outs, setOuts] = useState(0);
+//    let [outs, setOuts] = useState(0);
 
     
     function ballCount() {
@@ -32,7 +29,7 @@ import React, {useState, setState} from 'react';
         else {
             setStrikes(0);
             setBalls(0)
-            // setOuts(0)
+            // setOuts(+1)
             // setOuts(outs+1)
 
             };
@@ -50,17 +47,17 @@ import React, {useState, setState} from 'react';
         return {foulCount};
       };
 
-      function outCount(){ 
-        if(outs < 2) {
-            setOuts(outs+1)
-              }
-        else {
-            setStrikes(0);
-            setBalls(0)
-            setOuts(0)
-            };
-            return {outCount}
-        };
+    //   function outCount(){ 
+    //     if(outs < 2) {
+    //         setOuts(outs+1)
+    //           }
+    //     else {
+    //         setStrikes(0);
+    //         setBalls(0)
+    //         setOuts(0)
+    //         };
+    //         return {outCount}
+    //     };
    
      function hitCount(){
          setHits(hits+1)
@@ -78,16 +75,16 @@ return (
         <h2>Here in the Dashboard return</h2>
      <button className='ballsButton' onClick= {ballCount}>Balls</button> 
      
-     <button className='strikeButton'onClick= {strikeCount}>AddStrike</button>
+     <button className='strikeButton'onClick= {strikeCount}>Strikes</button>
     
      <button className='foulButton' onClick= {foulCount}>Fouls</button>
-     <button className='outButton' onClick= {outCount}>Outs</button>  
+     {/* <button className='outButton' onClick= {outCount}>Outs</button>   */}
      <button className='hitButton' onClick= {hitCount}>Hits</button>     
     </div>
     <div className='displays'>
         <p>Balls: {balls}</p>  
         <p>Strikes: {strikes}</p>
-        <p>Outs: {outs}</p>
+        {/* <p>Outs: {outs}</p> */}
         <p>Hits: {hits}</p>
         <p>Fouls: {fouls}</p>
     </div>
