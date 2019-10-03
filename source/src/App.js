@@ -1,17 +1,16 @@
 import React from 'react';
+// import logo from './logo.svg';
+import Dashboard from './Dashboard'
 import './App.css';
 
 function App() {
+// console.log('App.js -> %cprops:', 'color: red', props)
   return (
-    <div className="App">
-      <header className="App-header">
-        <h2>Welcome to the Dashboard!</h2>
-      </header>
-    </div>
+   
+   <Dashboard/>
   );
 }
 
 export default App;
-  
 
 
