@@ -29,6 +29,7 @@ import React, {useState} from 'react';
         else {
             setStrikes(0);
             setBalls(0)
+            setFouls(0)
             // setOuts(+1)
             // setOuts(outs+1)
 
